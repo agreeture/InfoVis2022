@@ -1,0 +1,48 @@
+<html>
+    <head>
+		<title>test2</title>
+	</head>
+	<body> 
+		<script src="vec3.js"></script>
+		
+		<label>vertex 0：<input type="number" id="x0">
+						<input type="number" id="y0">
+						<input type="number" id="z0">
+		</label>
+		<label>vertex 1：<input type="number" id="x1">
+						<input type="number" id="y1">
+						<input type="number" id="z1">
+		</label>
+		<label>vertex 2：<input type="number" id="x2">
+						<input type="number" id="y2">
+						<input type="number" id="z2">
+		</label>
+		
+		<input type="button" value="Check" id="checkButton">
+
+		<p id="msg"></p>
+		
+		<script>
+			function butotnClick(){
+				var x0=document.getElementById("x0"), y0=document.getElementById("y0"), z0=document.getElementById("z0"); 
+				var x1=document.getElementById("x1"), y1=document.getElementById("y1"), z0=document.getElementById("z1");
+				var x2=document.getElementById("x2"), y2=document.getElementById("y2"), z0=document.getElementById("z2");
+				var v0 = new Vec3( x0, y0, z0 );
+				var v1 = new Vec3( x1, y1, z1 );
+				var v2 = new Vec3( x2, y2, z2 );
+				msg.innerText = " " + x0;
+			}
+		
+			
+			
+			let msg = document.getElementById('msg');
+			let checkButton = document.getElementById('checkButton');
+			checkButton.addEventListener('click', butotnClick);
+			
+			var S = AreaOfTriangle( v0, v1, v2 );
+		</script>
+		
+		
+	</body>
+
+</html>
